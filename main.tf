@@ -20,7 +20,7 @@ resource "aws_subnet" "my_subnet" {
   }
 }
 
-
+/*
 #Create security group with firewall rules
 resource "aws_security_group" "my_security_group" {
   name        = var.security_group
@@ -75,3 +75,4 @@ tags= {
     Name = "my_elastic_ip"
   }
 }
+*/
