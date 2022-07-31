@@ -34,6 +34,13 @@ resource "aws_security_group" "my_security_group" {
   }
 }
 
+resource "aws_default_subnet" "default_az1" {
+  availability_zone = var.aws_region
+
+  tags = {
+    Name = "Default subnet for east-us-1"
+  }
+}
 # Create AWS ec2 instance
 resource "aws_instance" "myFirstInstance" {
   ami           = var.ami_id
