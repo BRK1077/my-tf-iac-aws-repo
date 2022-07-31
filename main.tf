@@ -61,7 +61,8 @@ resource "aws_instance" "myFirstInstance" {
   key_name = var.key_name
   instance_type = var.instance_type
   subnet_id = aws_subnet.my_subnet.id
-  security_groups= var.security_group
+  #security_groups= var.security_group
+  vpc_security_group_ids = aws_security_group.my_security_group.id
   tags= {
     Name = var.tag_name
   }
