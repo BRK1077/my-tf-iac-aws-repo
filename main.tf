@@ -35,7 +35,7 @@ resource "aws_security_group" "my_security_group" {
 }
 
 resource "aws_default_subnet" "default_az1" {
-  availability_zone = var.aws_region
+  availability_zone = "us-east-1a"
 
   tags = {
     Name = "Default subnet for east-us-1"
